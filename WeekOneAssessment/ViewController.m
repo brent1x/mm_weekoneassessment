@@ -8,9 +8,11 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textFieldOne;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldTwo;
+@property (weak, nonatomic) IBOutlet UIButton *calculateButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *webButton;
 @property NSString *resultTitle;
 
 @end
@@ -26,10 +28,9 @@
     int second = [self.textFieldTwo.text intValue];
     int result;
     result = first * second;
-
     self.resultTitle = [NSString stringWithFormat:@"%i", result];
     [self setTitle:self.resultTitle];
-
+    [self.view endEditing:YES];
 }
 
 @end

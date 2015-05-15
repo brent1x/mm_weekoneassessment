@@ -30,7 +30,10 @@
                                     <constraint firstAttribute="width" constant="97" id="1wa-8B-HYq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="K2H-kK-k8K"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eIZ-ji-2EY">
                                 <rect key="frame" x="283" y="136" width="34" height="21"/>
@@ -91,8 +94,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="calculateButton" destination="ypV-Pt-AIe" id="C7N-TD-21F"/>
                         <outlet property="textFieldOne" destination="cTe-Oj-c4P" id="53n-9F-BxW"/>
-                        <outlet property="textFieldTwo" destination="Tg1-10-3cV" id="s4a-gV-9fw"/>
+                        <outlet property="textFieldTwo" destination="Tg1-10-3cV" id="1tL-9f-ITS"/>
+                        <outlet property="webButton" destination="Abw-Z3-HEs" id="SAL-hw-fT5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
