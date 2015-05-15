@@ -9,6 +9,9 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textFieldOne;
+@property (weak, nonatomic) IBOutlet UITextField *textFieldTwo;
+@property NSString *resultTitle;
 
 @end
 
@@ -16,12 +19,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)onCalculateButtonTapped:(id)sender {
+    int first = [self.textFieldOne.text intValue];
+    int second = [self.textFieldTwo.text intValue];
+    int result;
+    result = first * second;
+
+    self.resultTitle = [NSString stringWithFormat:@"%i", result];
+    [self setTitle:self.resultTitle];
+
 }
 
 @end
