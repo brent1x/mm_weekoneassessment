@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WebViewController.h"
 
 @interface ViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textFieldOne;
@@ -21,6 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.webButton.enabled = FALSE;
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    WebViewController *destVC = segue.destinationViewController;
+    destVC.sumTitle = self.resultTitle;
 }
 
 - (IBAction)onCalculateButtonTapped:(id)sender {
@@ -31,6 +40,13 @@
     self.resultTitle = [NSString stringWithFormat:@"%i", result];
     [self setTitle:self.resultTitle];
     [self.view endEditing:YES];
+    if (result % 5 == 0) {
+        self.webButton.enabled = TRUE;
+    }
+}
+
+- (IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue {
+
 }
 
 @end

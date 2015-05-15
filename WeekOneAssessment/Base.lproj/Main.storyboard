@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iVC-ug-mXc">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Result-->
@@ -58,14 +59,6 @@
                                     <action selector="onCalculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oi3-JD-HhV"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="S70-Eg-s3v">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="pxb-90-NGP"/>
-                                    <constraint firstAttribute="width" constant="20" id="rLM-sa-oLq"/>
-                                </constraints>
-                                <color key="color" red="0.54350709915161133" green="0.089617796242237091" blue="0.075311921536922455" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -75,10 +68,8 @@
                             <constraint firstItem="eIZ-ji-2EY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="72" id="b3h-xL-BWm"/>
                             <constraint firstAttribute="centerX" secondItem="ypV-Pt-AIe" secondAttribute="centerX" id="d4z-dZ-pEA"/>
                             <constraint firstItem="eIZ-ji-2EY" firstAttribute="leading" secondItem="cTe-Oj-c4P" secondAttribute="trailing" constant="51" id="hPg-Y7-XYa"/>
-                            <constraint firstAttribute="centerX" secondItem="S70-Eg-s3v" secondAttribute="centerX" id="jBe-HA-O7g"/>
                             <constraint firstAttribute="centerX" secondItem="eIZ-ji-2EY" secondAttribute="centerX" id="k9y-2r-vtT"/>
                             <constraint firstItem="ypV-Pt-AIe" firstAttribute="top" secondItem="eIZ-ji-2EY" secondAttribute="bottom" constant="66" id="rFg-wQ-zve"/>
-                            <constraint firstAttribute="centerY" secondItem="S70-Eg-s3v" secondAttribute="centerY" id="uEa-Xw-8k4"/>
                             <constraint firstAttribute="centerX" secondItem="eIZ-ji-2EY" secondAttribute="centerX" id="vPK-jQ-pPL"/>
                         </constraints>
                     </view>
@@ -90,6 +81,9 @@
                                 <state key="normal" title="Web">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="BvG-Nt-nOF" kind="push" id="ECD-lI-q4R"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -103,6 +97,75 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1117" y="429"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="6b0-fQ-Ik2">
+            <objects>
+                <viewController id="BvG-Nt-nOF" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Sto-oC-7vs"/>
+                        <viewControllerLayoutGuide type="bottom" id="471-to-xui"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7VZ-fL-tfu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vij-LH-6U5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="16S-KS-Cke">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="82h-3O-7kk"/>
+                                    <constraint firstAttribute="width" constant="37" id="nOY-HK-0ud"/>
+                                </constraints>
+                                <color key="color" red="0.15692138671875" green="0.52370548248291016" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="16S-KS-Cke" secondAttribute="centerY" id="0Lr-sj-FUO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vij-LH-6U5" secondAttribute="trailing" constant="-16" id="5Qx-iD-zBX"/>
+                            <constraint firstAttribute="centerX" secondItem="16S-KS-Cke" secondAttribute="centerX" id="VOq-lV-SnD"/>
+                            <constraint firstItem="Vij-LH-6U5" firstAttribute="top" secondItem="7VZ-fL-tfu" secondAttribute="topMargin" id="aEh-VR-bir"/>
+                            <constraint firstItem="Vij-LH-6U5" firstAttribute="top" secondItem="Sto-oC-7vs" secondAttribute="bottom" constant="-64" id="eN7-d2-Wke"/>
+                            <constraint firstItem="Vij-LH-6U5" firstAttribute="leading" secondItem="7VZ-fL-tfu" secondAttribute="leadingMargin" constant="-16" id="gyq-GJ-qtb"/>
+                            <constraint firstItem="Vij-LH-6U5" firstAttribute="leading" secondItem="7VZ-fL-tfu" secondAttribute="leadingMargin" constant="-16" id="k4p-Df-5Ct"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vij-LH-6U5" secondAttribute="trailing" constant="-16" id="mcU-n9-7zv"/>
+                            <constraint firstItem="471-to-xui" firstAttribute="top" secondItem="Vij-LH-6U5" secondAttribute="bottom" id="mhV-0p-YCI"/>
+                            <constraint firstItem="471-to-xui" firstAttribute="top" secondItem="Vij-LH-6U5" secondAttribute="bottom" id="tNi-06-fd3"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="ZxC-rT-Hip">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="obI-yQ-pY4">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v4R-WF-phW">
+                                <rect key="frame" x="-23" y="-15" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ivw-4v-PA7" kind="unwind" unwindAction="unwindToThisViewController:" id="oRI-Y1-t7N"/>
+                                </connections>
+                            </button>
+                            <connections>
+                                <segue destination="Ivw-4v-PA7" kind="unwind" unwindAction="unwindToThisViewController:" id="SU5-ai-idD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="16S-KS-Cke" id="yNv-2O-Uwe"/>
+                        <outlet property="webView" destination="Vij-LH-6U5" id="gae-ig-hnj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tic-eb-H9c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ivw-4v-PA7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1838" y="429"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Sp1-F4-20Z">

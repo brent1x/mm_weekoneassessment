@@ -14,6 +14,7 @@
 		8448AA2A1B06521600E1783F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8448AA291B06521600E1783F /* Images.xcassets */; };
 		8448AA2D1B06521600E1783F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8448AA2B1B06521600E1783F /* LaunchScreen.xib */; };
 		8448AA391B06521600E1783F /* WeekOneAssessmentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8448AA381B06521600E1783F /* WeekOneAssessmentTests.m */; };
+		8448AA441B066A1300E1783F /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8448AA431B066A1300E1783F /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		8448AA321B06521600E1783F /* WeekOneAssessmentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekOneAssessmentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8448AA371B06521600E1783F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8448AA381B06521600E1783F /* WeekOneAssessmentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeekOneAssessmentTests.m; sourceTree = "<group>"; };
+		8448AA421B066A1300E1783F /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		8448AA431B066A1300E1783F /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				8448AA211B06521600E1783F /* AppDelegate.m */,
 				8448AA231B06521600E1783F /* ViewController.h */,
 				8448AA241B06521600E1783F /* ViewController.m */,
+				8448AA421B066A1300E1783F /* WebViewController.h */,
+				8448AA431B066A1300E1783F /* WebViewController.m */,
 				8448AA261B06521600E1783F /* Main.storyboard */,
 				8448AA291B06521600E1783F /* Images.xcassets */,
 				8448AA2B1B06521600E1783F /* LaunchScreen.xib */,
@@ -222,6 +227,7 @@
 				8448AA251B06521600E1783F /* ViewController.m in Sources */,
 				8448AA221B06521600E1783F /* AppDelegate.m in Sources */,
 				8448AA1F1B06521600E1783F /* main.m in Sources */,
+				8448AA441B066A1300E1783F /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
